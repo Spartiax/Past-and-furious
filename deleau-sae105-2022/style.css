@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Josefin+Sans & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Josefin+Sans &famille= Nerko+One & display=swap');
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: #EEE3D0;
+    overflow-x: hidden;
+    background-image: url(./image/jsp.png);
+    background-repeat: repeat;
+ 
+}
+
+body{
+    height: 760px ;
+    width: 100vw;
+}
+
+
+header{
+    width: 100%;
+    height: 12vh;
+    position : fixed;
+    z-index: 2;
+   font-size: 28px;
+   font-weight: bold;
+
+
+    
+}
+
+header div a {
+    font-family: "Nerko One" ;
+    
+    transition: .7s ;
+
+
+ }
+
+ header, a:hover{
+    transform: scale(1.08);
+ }
+
+ h2 {
+    font-family: "Nerko One", cursive ;
+    font-size: 30px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+
+
+
+
+header div{
+    width: 33vw;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: underline;
+    color:  #CD5C5C;
+    font-size: 30px;
+    
+}
+
+
+#logo{
+    position: fixed;
+    top: 0;
+    left: 34vw;
+    height: 35vh;
+    
+   
+}
+
+#logo img{
+    height: 60%;
+}
+
+#gauche {
+    word-spacing: 5vw;
+    margin-top: 4vh;
+    float:left;
+    margin-left: 5vw;
+}
+
+#droite{
+    word-spacing: 7vw;
+    float: right;
+    margin-top: 4vh;
+    margin-right: 5vw;
+
+}
+
+
+#gauche #ounoustrouver {
+    word-spacing: 0;
+}
+
+#droite #ounoustrouver {
+    word-spacing: 0;
+}
+#apropos{
+    word-spacing: 0;
+}
+
+
+
+/*//////////////////////////////// section //////////////////*/
+
+
+.section {
+    height: 100vh;
+    padding-top: 19vh;
+    width: 100vw;
+}
+
+.container{
+   /* width : 1024px;
+    margin : 0 auto;
+    padding-top: 5vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    width: calc(100vw / 3);
+    float: left;
+    */
+
+    display: inline-block;
+    margin: 30px;
+    max-width: 100%;
+
+}
+
+article{
+    width: 25vw;
+    background-color: transparent;
+    margin : 24px;
+    border-radius : 16px;
+    box-shadow: 0 4px 8px 0 black;
+    overflow: hidden;
+    transition: transform 0.4s;
+
+}
+
+article:hover{
+    
+    transform: scale(1.08);
+}
+
+
+article .article-image{
+    height : 220px;
+    background-color: #faf1e0;
+    background-size : contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(./image/menu.png);
+}
+
+.container:nth-child(2) .article-image{
+    background-image: url(./image/ou_nous_trouver.png);
+}
+
+.container:last-child .article-image{
+    background-image: url(./image/aboutus.png);
+}
+
+
+article .contenu{
+    padding : 16px;
+    color: #000;
+}
+
+.container:first-child .contenu {
+background-color:#FA8072;
+}
+
+.container:nth-child(2) .contenu {
+    background-color: #FA8072;
+}
+.container:last-child .contenu {
+    background-color: #FA8072;
+}
+
+article .article-contenu{
+    color:black;
+}
+
+article .article-bottom,
+article .article-bottom a{
+    align-items: center;
+    background-color: #eb7568;
+    color: white;
+    padding: 10px 0;
+    transition: 2s ease-in-out;
+}
+
+.container:nth-child(2) .article-bottom,
+.container:nth-child(2) .article-bottom a {
+    background-color: #eb7568;
+}
+
+.container:nth-child(3) .article-bottom,
+.container:nth-child(3) .article-bottom a {
+    background-color: #eb7568;
+}
+
+
+article .article-bottom a:hover {
+    text-decoration: none;
+    transition: 2s ease-in;
+    font-size: 16px;
+}
+
+article .article-bottom a::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    color: #000;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    background-color: #feeeec99;
+    transition: 2s ease-in;
+
+}
+
+article .article-bottom a:hover::before {
+    width: 25vw;
+    background-color: #feeeecFF;
+    cursor: pointer;
+}
+
+article .article-bottom-contenu{
+    text-align: center;
+    padding : 6px 0px;
+    border-right : solid 1px black(0, 0, 0, 0.16);
+
+}
+
+
+.transition{
+
+    position: absolute;
+    height: 750px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background:  #FA8072;
+    animation: .5s transi forwards;
+    z-index: 999;
+
+}
+
+@keyframes transi {
+
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+    
+    50%{
+        opacity: 0.9;
+    }
+
+    100%{
+        opacity: 0;
+        left: 100vw;
+    }
+}
+
+
+/*////////////////////////////////////////////////Footer/////////////////////////////////*/
+
+footer{
+    position: fixed;
+    background-color: #000;
+    opacity: .8;
+    height: 4vh;
+    width: 100vw;
+    top: 96vh;
+    
+}
+
+#f1{
+    width: 33vw;
+    color: white;
+    float: left;
+    padding: 0.5vH 0 0 1.5vw;
+ 
+}
+
+#f2{
+    width: 33vw;
+    color: white;
+    float: left;
+    text-align: center;
+
+    padding: 0.5vh 0 0 0;
+}
+
+#f3{
+    width: 25vw;
+    float: left;
+    color: white;
+    text-align: right;
+    padding: 0.5vh 0 0 0;
+    padding-right: 50px;
+}
+
+
+.logos{
+    width: 3vh;
+    height: 3vh;
+
+}
+
+#f3 a:nth-child(2) {
+    margin: 0 80px;
+}
+
+
+.h2a:hover{
+    color : black;
+    text-decoration: underline;
+}

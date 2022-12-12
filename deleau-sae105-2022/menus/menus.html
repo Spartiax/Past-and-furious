@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./menus.css">
+    <title>Page des menus</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="gauche">
+            <a id="menus" href="../menus/menus.html" alt="Page des menus">Menus</a>
+            <a id="ounoustrouver" href="../ounoustrouver/ounoustrouver.html" alt="Page pour nous trouver">Où nous
+                trouver</a>
+        </div>
+
+        <div id="logo">
+            <a href="../index.html"> <img src="../image/food truck logo.png" alt="Logo past and furious"
+                    title="Retourner à la page d'accueil"></a>
+        </div>
+
+        <div id="droite">
+            <a id="apropos" href="../apropos/apropos.html" alt="Page à propos de nous">À propos</a>
+            <a id="contact" href="../nouscontacter/contact.html" alt="Page pour nous contactez">Contact</a>
+        </div>
+    </header>
+
+
+    <div class="section">
+        <div class="container">
+
+            <article>
+
+
+                <div class="bouton">
+                    <button onclick="affichageMenu(0)">S</button>
+                    <button onclick="affichageMenu(1)">M</button>
+                    <button onclick="affichageMenu(2)">L</button>
+                    <button onclick="affichagePlus()">Infos</button>
+                    
+                </div>
+        <div id="contenu">
+            
+                  <h3 class="cliquer">Veuillez cliquer sur l'une des 4 cases pour plus d'informations</p>
+       </div>
+
+
+            </article>
+
+
+            <div class="transition"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div id="f1">Past and furious</div>
+        <div id="f2">pastandfurious@gmail.com</div>
+        <div id="f3">
+            <a href="https://www.pinterest.fr/" target="_blank"><img class="logo" src="../image/pinterest.png"
+                    alt="pinterest.com"></a>
+            <a href="https://fr-fr.facebook.com/" target="_blank"><img class="logo" src="../image/facebook.png"
+                    alt="facebook.com"></a>
+            <a href="https://www.instagram.com/?hl=fr" target="_blank"><img class="logo" src="../image/insta.png"
+                    alt="instagram.com"></a>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script>
+        var formules = {
+            S: {
+                forms: ["<h3 class=infos>" + "Menu S (4.90€)" + "</h3>", " <p class=centre> Boîte S +", " Boisson (33cl) +", " Dessert </p>" + "<br> <div class=transitionboite></div>"],
+            },
+            M: {
+                forms: ["<h3 class=infos>" + "Menu M (5.90€)" + "</h3>", " <p class=centre> Boîte M +", " Boisson (33cl) +", " Dessert </p>" + "<br> <div class=transitionboite></div>"],
+
+            },
+            L : {
+                forms: ["<h3 class=infos>" + "Menu L (6.90€)" + "</h3>", " <p class=centre> Boîte L +", " Grande Boisson (50cl) +", " Dessert </p>" + "<br> <div class=transitionboite></div>"],
+            }
+        }
+        var menus = {
+            pates: ["<h3>" + "Types de pâtes " + "</h3>", " Coquillettes /", " Spaghettis /", " Tagliatelles" + "<br> <div class=transitionboite></div>"],
+
+            sauces: [ "<h3>" + "Menu Complet -->" + "</h3>",
+            "<a href=../image/menucomplet.png target=_blank><img class=menucomplet src=../image/menucomplet.png alt= pinterest.com></a>"
+
+
+
+            + "<br>"],
+           
+            boissons: ["<h3>" + "Boissons " + "</h3>", " - Soda (coca-cola, orangina, oasis, ice-tea) <br> <br>", " - Corona (Bière) " + "<br> "]
+        }
+        const monAffiche = document.getElementById("contenu");   
+        function affichageMenu(nbr) {
+            
+            var compteur = 0;
+            for (const item in formules) {
+                if (compteur === nbr) {
+                    monAffiche.innerHTML = "<p class=textjs>" + formules[item].forms.join("<br>") + "</p>";
+
+               
+                }
+                compteur++;
+            }
+        }
+        function affichagePlus() {
+            monAffiche.innerHTML = "";
+            for (const item in menus) {
+                monAffiche.innerHTML += menus[item].join("");
+            }
+        }
+    </script>
+</body>
+
+</html>

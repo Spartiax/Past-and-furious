@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menustest.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-top">
+        <div class="petit-container">
+            <button onclick="affichageMenu(0)">S</button>
+            <button onclick="affichageMenu(1)">M</button>
+            <button onclick="affichageMenu(2)">L</button>
+            <button onclick="affichagePlus()">+</button>
+        </div>
+    </div>
+    <div class="conteneur-bottom">
+        <div id="affichage" class="petit-container">
+
+        </div>
+    </div>
+    <script>
+        var formules = {
+            S: {
+                ingredients: ["petite boisson", "petit dessert", "petit plat"]
+            },
+            M: {
+                ingredients: ["moyen boisson", "moyen dessert", "moyen plat"]
+            },
+            L: {
+                ingredients: ["grand boisson", "grand dessert", "grand plat"]
+            }
+        }
+        var menus = {
+            pates: ["coquillette", "spaghetti", "callelonni"],
+            sauces: ["carbonara", "pesto", "bolognaise", "provencal", "arrabiata"],
+            boissons: ["coca", "fanta", "eau", "bière"]
+        }
+        const monAffiche = window.document.getElementById("affichage");   
+        function affichageMenu(nbr) {
+            var compteur = 0;
+            for (const item in formules) {
+                if (compteur === nbr) {
+                    monAffiche.innerHTML = formules[item].ingredients.join("<br>");
+                }
+                compteur++;
+            }
+        }
+        function affichagePlus() {
+            monAffiche.innerHTML = "";
+            for (const item in menus) {
+                monAffiche.innerHTML += menus[item];
+            }
+        }
+    </script>
+</body>
+</html>
+
+ 
